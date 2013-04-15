@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Yury Lebedev']
   s.email       = ['lebedev.yurii@gmail.com']
   s.homepage    = 'https://github.com/lebedev-yury/smslist'
-  s.summary     = 'Wrapper for smslist API'
+  s.summary     = 'Ruby wrapper for smslist API'
   s.description = 'Now you can send sms messages to your users.'
   s.licenses    = ['MIT']
 
