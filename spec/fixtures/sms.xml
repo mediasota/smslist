@@ -1,0 +1,7 @@
+<?xml  version="1.0" encoding="utf-8" ?>
+<response>
+   <information number_sms="1" id_sms="1001" parts="2">send</information>
+   <information number_sms="2" id_sms="1002" parts="2">send</information>
+   <information number_sms="3" id_sms="1003" parts="2">send</information>
+   <information number_sms="4" id_sms="1004" parts="2">Номер телефона присутствует в стоп-листе.</information>
+ </response>

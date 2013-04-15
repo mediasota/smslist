@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<response>
+    <money>10</money>
+    <sms area="Россия">20</sms>
+    <sms area="Украина">10</sms>
+</response>
