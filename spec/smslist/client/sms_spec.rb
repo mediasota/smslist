@@ -15,7 +15,7 @@ describe Smslist::Client::Sms do
     end
 
     it 'includes a Hash for sent messages, with status, id and parts count' do
-      expect(client.send_sms('Hello everyone', recipients))
+      expect(client.send_sms('Hello everyone', recipients, flash: true))
         .to include('79031234567' => { status: :ok, id: 1001, parts: 2 })
     end
 
