@@ -22,5 +22,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'nokogiri', '>= 1.5'
 
   s.add_development_dependency 'bundler', '~> 1.0'
+  s.add_development_dependency 'rake', '>= 10.0'
   s.add_development_dependency 'rspec', '~> 2.0'
 end

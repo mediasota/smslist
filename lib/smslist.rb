@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'smslist/configuration'
+require 'smslist/error'
 require 'smslist/client'
 
 module Smslist

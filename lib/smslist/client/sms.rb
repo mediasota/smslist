@@ -13,7 +13,9 @@ module Smslist
       #   recipients = %w(79031234567 79032345678)
       #   client.send_sms('Message', recipients)
       def send_sms(text, recipients = [], options = {})
-        sms_sender = sender
+        unless sms_sender = sender
+          raise Smslist::NoSenderError.new('You must set a sender')
+        end
 
         body = build_xml_body do |xml|
           xml.message(type: "#{ 'flash' if options[:flash] }sms") {

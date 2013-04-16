@@ -28,26 +28,11 @@ describe Smslist::Client do
         expect(client.authentication).to eql({ :login => 'username', :password => 'secret' })
       end
 
-      it 'empty, if token, login and password are not set' do
+      it 'raises Smslist::UnauthorizedError, if credentials are not set' do
         client = Smslist::Client.new
-        expect(client.authentication).to eql({})
-      end
-    end
-
-    describe '#authenticated?' do
-      it 'true, if token is set' do
-        client = Smslist::Client.new(:token => 'api_token')
-        expect(client.authenticated?).to eql(true)
-      end
-
-      it 'true, if login and password are set' do
-        client = Smslist::Client.new(:login => 'l', :password => 'p')
-        expect(client.authenticated?).to eql(true)
-      end
-
-      it 'false, if token, login and password are not set' do
-        client = Smslist::Client.new
-        expect(client.authenticated?).to eql(false)
+        expect {
+          client.authentication
+        }.to raise_error(Smslist::UnauthorizedError)
       end
     end
   end

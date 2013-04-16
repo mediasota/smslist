@@ -6,12 +6,9 @@ module Smslist
       elsif login && password
         {:login => login, :password => password}
       else
-        {}
+        raise Smslist::UnauthorizedError.new('Access token, or login '\
+          'and password are not initialized')
       end
-    end
-
-    def authenticated?
-      !authentication.empty?
     end
   end
 end
