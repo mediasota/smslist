@@ -18,7 +18,7 @@ module Smslist
         end
 
         body = build_xml_body do |xml|
-          xml.message(type: "#{ 'flash' if options[:flash] }sms") {
+          xml.message(:type => "#{ 'flash' if options[:flash] }sms") {
             xml.sender sms_sender
             xml.text_ text.encode(:xml => :text)
             recipients.each_with_index do |recipient, index|
