@@ -24,8 +24,8 @@ describe Smslist::Client::State do
     end
 
     it 'includes a Hash for not delivered messages' do
-      expect(client.state(message_ids))
-        .to include('1004' => { :state => 'not_deliver',
+      expect(client.state(message_ids)).
+        to include('1004' => { :state => 'not_deliver',
           :error => 'The subscriber is absent or out of a coverage' })
     end
   end
