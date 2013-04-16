@@ -36,6 +36,12 @@ module Smslist
         end
 
         response = parse_xml(post body.to_xml, :state)
+        parse_state_response(response)
+      end
+
+      private
+
+      def parse_state_response(response)
         response_array = response.xpath('response/state').map do |node|
           if node[:err] == '0'
             [

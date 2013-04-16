@@ -28,6 +28,12 @@ module Smslist
         end
 
         response = parse_xml(post body.to_xml)
+        parse_send_sms_response(response, recipients)
+      end
+
+      private
+
+      def parse_send_sms_response(response, recipients)
         response_array = response.xpath('response/information').map do |node|
           if node.text == 'send'
             [

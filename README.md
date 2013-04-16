@@ -84,7 +84,7 @@ message_ids = %w(1001 1002 1003 1004)
 response = client.state(message_ids)
 ```
 
-You will get a hash for id, with state and datetime, or error message:
+You will get a hash for id, with state and datetime, or error message.
 
 ## Supported Ruby Versions
 
