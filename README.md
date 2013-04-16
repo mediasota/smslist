@@ -1,5 +1,8 @@
 # Smslist
 
+[![Build Status](https://secure.travis-ci.org/lebedev-yury/smslist.png?branch=master)][travis]
+[![Code Climate](https://codeclimate.com/github/lebedev-yury/smslist.png)][codeclimate]
+
 Simple Ruby wrapper for the SMSlist API.
 
 ## Installation
