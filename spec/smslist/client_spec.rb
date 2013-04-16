@@ -37,6 +37,19 @@ describe Smslist::Client do
     end
   end
 
+  context 'wrong credentials' do
+    let(:client) { Smslist::Client.new(:token => 'secret') }
+    before(:each) do
+      stub_post('balance.php').to_return(xml_response('wrong_credentials.xml'))
+    end
+
+    it 'raises Error' do
+      expect {
+        client.balance
+      }.to raise_error(Smslist::Error)
+    end
+  end
+
   context 'Request module' do
     let(:client) { Smslist::Client.new }
 

@@ -7,7 +7,7 @@ module Smslist
       # @param recipients [Array] Array of phone numbers
       # @option values [Boolean] :flash True for flash sms messages
       # @return [Hash] Hash with statuses for each sent message
-      # @example Send message to a small list of users
+      # @example Send message to a list of users
       #   client = Smslist.new(token: 'secret', sender: '4040')
       #
       #   recipients = %w(79031234567 79032345678)
