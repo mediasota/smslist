@@ -47,6 +47,12 @@ recipients = %w(79031234567 79032345678 79033456789)
 response = client.send_sms('Your text message', recipients)
 ```
 
+If can pass optional param, to send a flash sms message:
+
+```ruby
+response = client.send_sms('Your text message', recipients, flash: true)
+```
+
 ## Inspiration
 Smslist was inspired by [Octokit][].
 

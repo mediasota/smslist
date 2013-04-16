@@ -22,9 +22,9 @@ end
 
 def xml_response(file)
   {
-    body: fixture(file),
-    headers: {
-      content_type: 'text/xml; charset=utf-8'
+    :body => fixture(file),
+    :headers => {
+      :content_type => 'text/xml; charset=utf-8'
     }
   }
 end

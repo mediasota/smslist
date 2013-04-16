@@ -2,9 +2,9 @@ module Smslist
   module Authentication
     def authentication
       if token
-        {token: token}
+        {:token => token}
       elsif login && password
-        {login: login, password: password}
+        {:login => login, :password => password}
       else
         {}
       end

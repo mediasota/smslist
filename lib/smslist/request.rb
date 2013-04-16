@@ -3,14 +3,14 @@ require 'httparty'
 module Smslist
   module Request
     def post(xml, method = nil)
-      HTTParty.post request_uri(method), body: xml, headers: headers
+      HTTParty.post request_uri(method), :body => xml, :headers => headers
     end
 
     def build_xml_body(&block)
-      Nokogiri::XML::Builder.new(encoding: 'utf-8') do |xml|
+      Nokogiri::XML::Builder.new(:encoding => 'utf-8') do |xml|
         xml.request {
           xml.security {
-            authentication.each { |k, v| xml.send(k, value: v) }
+            authentication.each { |k, v| xml.send(k, :value => v) }
           }
           xml.instance_eval(&block) if block_given?
         }

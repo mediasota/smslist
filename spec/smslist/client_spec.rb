@@ -13,19 +13,19 @@ describe Smslist::Client do
     describe '#authentication' do
       it 'hash with a token, if token, login and password are set' do
         client = Smslist::Client.new(
-          login: 'username',
-          password: 'secret',
-          token: 'api_token'
+          :login => 'username',
+          :password => 'secret',
+          :token => 'api_token'
         )
-        expect(client.authentication).to eql({ token: 'api_token' })
+        expect(client.authentication).to eql({ :token => 'api_token' })
       end
 
       it 'hash with login and password, if login and password are set' do
         client = Smslist::Client.new(
-          login: 'username',
-          password: 'secret'
+          :login => 'username',
+          :password => 'secret'
         )
-        expect(client.authentication).to eql({ login: 'username', password: 'secret' })
+        expect(client.authentication).to eql({ :login => 'username', :password => 'secret' })
       end
 
       it 'empty, if token, login and password are not set' do
@@ -36,12 +36,12 @@ describe Smslist::Client do
 
     describe '#authenticated?' do
       it 'true, if token is set' do
-        client = Smslist::Client.new(token: 'api_token')
+        client = Smslist::Client.new(:token => 'api_token')
         expect(client.authenticated?).to eql(true)
       end
 
       it 'true, if login and password are set' do
-        client = Smslist::Client.new(login: 'l', password: 'p')
+        client = Smslist::Client.new(:login => 'l', :password => 'p')
         expect(client.authenticated?).to eql(true)
       end
 
