@@ -16,13 +16,13 @@ describe Smslist::Client::Sms do
       end
 
       it 'includes a Hash for sent messages, with status, id and parts count' do
-        expect(client.send_sms('Hello everyone', recipients, :flash => true))
-          .to include('79031234567' => { :status => :ok, :id => 1001, :parts => 2 })
+        expect(client.send_sms('Hello everyone', recipients, :flash => true)).
+          to include('79031234567' => { :status => :ok, :id => 1001, :parts => 2 })
       end
 
       it 'includes a Hash for not sent messages' do
-        expect(client.send_sms('Hello everyone', recipients))
-          .to include('79034567890' => { :error => 'Номер телефона присутствует в стоп-листе.' })
+        expect(client.send_sms('Hello everyone', recipients)).
+          to include('79034567890' => { :error => 'Номер телефона присутствует в стоп-листе.' })
       end
     end
 
