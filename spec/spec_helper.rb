@@ -1,3 +1,6 @@
+require 'coveralls'
+Coveralls.wear!
+
 require 'smslist'
 require 'rspec'
 require 'webmock/rspec'

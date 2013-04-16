@@ -1,7 +1,14 @@
 # Smslist
 
 [![Build Status](https://secure.travis-ci.org/lebedev-yury/smslist.png?branch=master)][travis]
+[![Dependency Status](https://gemnasium.com/lebedev-yury/smslist.png?travis)][gemnasium]
 [![Code Climate](https://codeclimate.com/github/lebedev-yury/smslist.png)][codeclimate]
+[![Coverage Status](https://coveralls.io/repos/lebedev-yury/smslist/badge.png?branch=master)][coveralls]
+
+[travis]: http://travis-ci.org/lebedev-yury/smslist
+[gemnasium]: https://gemnasium.com/lebedev-yury/smslist
+[codeclimate]: https://codeclimate.com/github/lebedev-yury/smslist
+[coveralls]: https://coveralls.io/r/lebedev-yury/smslist
 
 Simple Ruby wrapper for the SMSlist API.
 
