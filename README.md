@@ -65,6 +65,43 @@ If can pass optional param, to send a flash sms message:
 response = client.send_sms('Your text message', recipients, flash: true)
 ```
 
+You will get a hash for each number, with status, message id (to retrieve status later) and number of parts:
+
+```ruby
+{
+  '79031234567' => { status: :ok, id: 1001, parts: 2 },
+  ...
+  '79033456789' => { error: 'Номер телефона присутствует в стоп-листе.' }
+}
+```
+
+Status :ok means, that the message was successfully placed in a queue.
+
+### Getting state of sent messages
+
+```ruby
+message_ids = %w(1001 1002 1003 1004)
+response = client.state(message_ids)
+```
+
+You will get a hash for id, with state and datetime, or error message:
+
+## Supported Ruby Versions
+
+This library aims to support and is [tested against][travis] the following Ruby
+implementations:
+
+* Ruby 1.8.7
+* Ruby 1.9.2
+* Ruby 1.9.3
+* Ruby 2.0.0
+
+If something doesn't work on one of these Ruby versions, it's a bug.
+
+This library may inadvertently work (or seem to work) on other Ruby
+implementations, however support will only be provided for the versions listed
+above.
+
 ## Inspiration
 Smslist was inspired by [Octokit][].
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<response>
+    <state id_sms="1001" time="2011-01-01 12:57:46" err="0">deliver</state>
+    <state id_sms="1002" time="2011-01-01 12:57:46" err="0">deliver</state>
+    <state id_sms="1003" time="2011-01-01 12:57:46" err="0">expired</state>
+    <state id_sms="1004" time="" err="1">not_deliver</state>
+</response>

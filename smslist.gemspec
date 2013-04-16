@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.description = 'Now you can send sms messages to your users.'
   s.licenses    = ['MIT']
 
-  s.files = %w(MIT-LICENSE Rakefile README.md)
+  s.files = %w(LICENSE.md Rakefile README.md)
   s.files += Dir.glob('lib/**/*.rb')
   s.files += Dir.glob('spec/**/*')
 

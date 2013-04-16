@@ -4,6 +4,7 @@ require 'smslist/response'
 
 require 'smslist/client/balance'
 require 'smslist/client/sms'
+require 'smslist/client/state'
 
 module Smslist
   class Client
@@ -23,5 +24,6 @@ module Smslist
 
     include Smslist::Client::Balance
     include Smslist::Client::Sms
+    include Smslist::Client::State
   end
 end

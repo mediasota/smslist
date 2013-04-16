@@ -51,6 +51,7 @@ GEM
     webmock (1.11.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
+    yard (0.8.6.1)
 
 PLATFORMS
   ruby
@@ -63,3 +64,4 @@ DEPENDENCIES
   rspec (>= 2.13)
   smslist!
   webmock (>= 1.11.0)
+  yard

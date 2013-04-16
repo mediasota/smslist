@@ -1,3 +1,5 @@
+require 'smslist/version'
+
 module Smslist
   module Configuration
     VALID_OPTIONS_KEYS = [
