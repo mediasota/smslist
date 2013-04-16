@@ -10,7 +10,9 @@
 [codeclimate]: https://codeclimate.com/github/lebedev-yury/smslist
 [coveralls]: https://coveralls.io/r/lebedev-yury/smslist
 
-Simple Ruby wrapper for the SMSlist API.
+Simple Ruby wrapper for the SMSlist API. [SMSlist][smslist] is a service for mass sending sms messages.
+
+[smslist]: http://www.smscell.ru
 
 ## Installation
 

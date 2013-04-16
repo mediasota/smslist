@@ -59,7 +59,7 @@ DEPENDENCIES
   bundler (~> 1.0)
   coveralls
   pry
-  rake (>= 10.0)
+  rake
   rspec (>= 2.13)
   smslist!
   webmock (>= 1.11.0)
