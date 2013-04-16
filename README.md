@@ -1,10 +1,12 @@
 # Smslist
 
+[![Gem Version](https://badge.fury.io/rb/smslist.png)][gem]
 [![Build Status](https://secure.travis-ci.org/lebedev-yury/smslist.png?branch=master)][travis]
 [![Dependency Status](https://gemnasium.com/lebedev-yury/smslist.png?travis)][gemnasium]
 [![Code Climate](https://codeclimate.com/github/lebedev-yury/smslist.png)][codeclimate]
 [![Coverage Status](https://coveralls.io/repos/lebedev-yury/smslist/badge.png?branch=master)][coveralls]
 
+[gem]: https://rubygems.org/gems/smslist
 [travis]: http://travis-ci.org/lebedev-yury/smslist
 [gemnasium]: https://gemnasium.com/lebedev-yury/smslist
 [codeclimate]: https://codeclimate.com/github/lebedev-yury/smslist
