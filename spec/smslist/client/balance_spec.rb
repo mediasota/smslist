@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Smslist::Client::Balance do
-  let(:client) { Smslist::Client.new(:token => 'secret') }
+  let(:client) { Smslist::Client.new(token: 'secret') }
 
   describe '#balance' do
     it 'returns remaining balance' do

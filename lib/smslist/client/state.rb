@@ -47,13 +47,13 @@ module Smslist
             [
               node['id_sms'],
               {
-                :state => node.text,
-                :datetime => DateTime.strptime(node['time'], '%Y-%m-%d %H:%M:%S')
+                state: node.text,
+                datetime: DateTime.strptime(node['time'], '%Y-%m-%d %H:%M:%S')
               }
             ]
           else
-            [node['id_sms'], { :state => node.text,
-              :error => STATE_ERRORS[node['err'].to_i] }]
+            [node['id_sms'], { state: node.text,
+              error: STATE_ERRORS[node['err'].to_i] }]
           end
         end
 

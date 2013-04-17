@@ -13,19 +13,19 @@ describe Smslist::Client do
     describe '#authentication' do
       it 'hash with a token, if token, login and password are set' do
         client = Smslist::Client.new(
-          :login => 'username',
-          :password => 'secret',
-          :token => 'api_token'
+          login: 'username',
+          password: 'secret',
+          token: 'api_token'
         )
-        expect(client.authentication).to eql({ :token => 'api_token' })
+        expect(client.authentication).to eql({ token: 'api_token' })
       end
 
       it 'hash with login and password, if login and password are set' do
         client = Smslist::Client.new(
-          :login => 'username',
-          :password => 'secret'
+          login: 'username',
+          password: 'secret'
         )
-        expect(client.authentication).to eql({ :login => 'username', :password => 'secret' })
+        expect(client.authentication).to eql({ login: 'username', password: 'secret' })
       end
 
       it 'raises Smslist::UnauthorizedError, if credentials are not set' do
@@ -38,7 +38,7 @@ describe Smslist::Client do
   end
 
   context 'wrong credentials' do
-    let(:client) { Smslist::Client.new(:token => 'secret') }
+    let(:client) { Smslist::Client.new(token: 'secret') }
     before(:each) do
       stub_post('balance.php').to_return(xml_response('wrong_credentials.xml'))
     end

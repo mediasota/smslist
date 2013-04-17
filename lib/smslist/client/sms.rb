@@ -18,11 +18,11 @@ module Smslist
         end
 
         body = build_xml_body do |xml|
-          xml.message(:type => "#{ 'flash' if options[:flash] }sms") {
+          xml.message(type:"#{ 'flash' if options[:flash] }sms") {
             xml.sender sms_sender
-            xml.text_ text.encode(:xml => :text)
+            xml.text_ text.encode(xml: :text)
             recipients.each_with_index do |recipient, index|
-              xml.abonent :phone => recipient, :number_sms => index + 1
+              xml.abonent phone: recipient, number_sms: index + 1
             end
           }
         end
@@ -38,10 +38,10 @@ module Smslist
           if node.text == 'send'
             [
               recipients[node[:number_sms].to_i - 1],
-              {:status => :ok, :id => node['id_sms'].to_i, :parts => node['parts'].to_i }
+              {status: :ok, id: node['id_sms'].to_i, parts: node['parts'].to_i }
             ]
           else
-            [recipients[node[:number_sms].to_i - 1], { :error => node.text }]
+            [recipients[node[:number_sms].to_i - 1], { error: node.text }]
           end
         end
 

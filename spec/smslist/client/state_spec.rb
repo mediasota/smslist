@@ -5,7 +5,7 @@ require 'spec_helper'
 describe Smslist::Client::State do
 
   describe '#state' do
-    let(:client) { Smslist::Client.new(:token => 'secret') }
+    let(:client) { Smslist::Client.new(token: 'secret') }
     let(:message_ids) { %w(1001 1002 1003 1004) }
 
     before(:each) { stub_post('state.php').to_return(xml_response('state.xml')) }
@@ -25,8 +25,8 @@ describe Smslist::Client::State do
 
     it 'includes a Hash for not delivered messages' do
       expect(client.state(message_ids)).
-        to include('1004' => { :state => 'not_deliver',
-          :error => 'The subscriber is absent or out of a coverage' })
+        to include('1004' => { state: 'not_deliver',
+          error: 'The subscriber is absent or out of a coverage' })
     end
   end
 end
